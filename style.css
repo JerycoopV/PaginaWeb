@@ -1,0 +1,1597 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #101731;
+    color: #fff;
+}
+
+.header {
+    background-color: #101731;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #282b44 /* Añade un marco blanco en la parte inferior */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header .logo img {
+    max-height: 50px;
+}
+
+.header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.header .nav ul li a.active {
+    color: #00ff85;
+}
+
+.header .nav ul li a:hover {
+    color: #00ff85;
+}
+
+.header .support {
+    display: flex;
+    align-items: flex-start; /* Alinea verticalmente el SVG y el texto */
+    color: #ffffff;
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.header .support svg {
+    width: 24px; /* Ajusta el tamaño del SVG */
+    height: 24px;
+    margin-left: 2px;
+    margin-bottom: 10px
+}
+
+.header .support .support-text {
+    display: flex;
+    flex-direction: column; /* Alinea el texto en columnas */
+    
+}
+
+.header .support .support-text span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.header .support .support-text .phone {
+    font-size: 14px;
+    margin-top: 10px; /* Espacio entre "Support" y el teléfono */
+    margin-left: 0px; /* Espacio adicional a la izquierda del número */
+}
+@media (max-width: 768px) {
+    .header .support {
+        display: none; /* Elimina la sección de soporte en pantallas pequeñas */
+    }
+
+    .header .nav ul {
+        flex-direction: column; /* Alinea los elementos de navegación en columna */
+        gap: 15px; /* Aumenta el espacio entre los enlaces */
+        padding: 20px; /* Añade padding alrededor de la lista */
+    }
+
+    .header .nav ul li {
+        margin-bottom: 10px; /* Espacio adicional entre los enlaces */
+    }
+
+    .header .nav ul li a {
+        font-size: 14px; /* Reduce el tamaño de fuente de los enlaces */
+        position: relative; /* Necesario para el pseudo-elemento */
+        padding: 10px; /* Añade padding dentro de los enlaces */
+    }
+
+    .header .nav ul li a::after {
+        content: ''; /* Crea un pseudo-elemento */
+        display: block;
+        height: 2px; /* Altura del subrayado */
+        background-color: #00ff85; /* Color del subrayado */
+        position: absolute; /* Posicionamiento absoluto respecto al enlace */
+        left: 0;
+        right: 0;
+        bottom: -4px; /* Posición del subrayado (debajo del texto) */
+        transition: width 0.3s; /* Transición suave */
+        width: 0; /* Inicialmente oculto */
+    }
+
+    .header .nav ul li a:hover::after {
+        width: 100%; /* Al pasar el mouse, el subrayado se expande */
+    }
+}
+main {
+    background-color: white;
+}
+
+/* Asegúrate de que la hamburguesa esté oculta
+
+
+/* Hero Section */
+.hero {
+    background-color: #101731;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 120px; /* Ajusta este valor según el espacio deseado */
+}
+
+.hero input[type="text"] {
+    background-color: #101731; /* Color de fondo azul oscuro */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 70%; /* Ancho al 100% */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin-right: 10px; /* Espacio a la derecha del cuadro de entrada */
+}
+
+.hero button {
+    background-color: #25ebc1; /* Cambia a un color que desees */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espacio interno del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.hero-text {
+    max-width: 600px;
+    padding-left: 80px; /* Ajusta este valor para mover el contenido a la izquierda */
+}
+
+.hero-text h3 {
+    font-size: 100px;
+    margin: 0;
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 70px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.hero-text h3,
+.hero-text h2 {
+    display: inline-block; /* Hace que ambos estén en la misma línea */
+    vertical-align: top; /* Alinea verticalmente a la parte superior */
+    margin: 0 10px 0 0; /* Ajusta el espacio entre los elementos si es necesario */
+}
+
+.hero-text p {
+    color: #c2c8e1;
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 10px 0;
+    line-height: 2.5;
+    margin-top: 30px; /* Espacio entre h2 y p */
+    margin-bottom: 50px; /* Espacio abajo del p */
+}
+
+.hero-text p {
+    max-width: 600px; /* Ajusta según sea necesario */
+    overflow-wrap: break-word; /* Asegura que las palabras largas se dividan */
+}
+
+.hero-image {
+    flex: 1; /* Allow the image to take up the remaining space */
+    display: flex;
+    justify-content: flex-end; /* Move image to the right */
+    align-items: center;
+    transform: translateX(-20px); /* Move the image to the left */
+    max-width: 40%;
+}
+
+/* Añadir esto para la imagen en modo móvil */
+.hero-image {
+    display: flex; /* Usar flex para alinear el contenido */
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    margin-top: 20px; /* Margen superior para separar de los elementos anteriores */
+}
+
+.hero-image img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de la pantalla */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen ocupe su propio bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Media Query para Pantallas Pequeñas */
+
+
+/* Animaciones */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animación para la imagen */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Aplicar las animaciones al texto */
+.hero-text {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/* Aplicar las animaciones a la imagen */
+.hero-image img {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+/* Search bar styles */
+.search-bar {
+    height: 50px;
+    width: 120%;
+    display: flex;
+    align-items: center;
+    background-color: #242c52; /* Background similar to the example */
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px;
+    gap: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 400px; /* Aumenta el ancho aquí según tus necesidades */
+    padding: 5px;
+    font-size: 15px;
+    border: none; /* Remove border */
+    border-radius: 8px 0 0 8px; /* Round only left side */
+    background-color: transparent;
+    color: #fff;
+    flex: 1;
+}
+
+.search-bar select {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.search-bar button {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 8px 8px 0; /* Round only right side */
+    background-color: #09e4a8;
+    color: #152741;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #00cc68; /* Darker green on hover */
+}
+
+/* Search bar styles */
+.search-bar {
+    height: 50px; 
+    width: 120%; 
+    display: flex;
+    align-items: center;
+    background-color: #242c52; /* Background similar to the example */
+    border-radius: 8px; /* Rounded corners */
+    padding: 5px;
+    gap: 10px;
+}
+
+.search-bar input[type="text"] {
+    width: 400px; /* Aumenta el ancho aquí según tus necesidades */
+    padding: 5px;
+    font-size: 15px;
+    border: none; /* Remove border */
+    border-radius: 8px 0 0 8px; /* Round only left side */
+    background-color: transparent;
+    color: #fff;
+    flex: 1;
+}
+
+.search-bar select {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+.search-bar button {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 8px 8px 0; /* Round only right side */
+    background-color: #09e4a8;
+    color: #152741;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #00cc68; /* Darker green on hover */
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Cambia la dirección del flex para apilar elementos */
+        align-items: center; /* Centra todos los elementos */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    .hero-text {
+        padding-left: 0; /* Quitar el padding a la izquierda en móvil */
+        max-width: 100%; /* Permitir el 100% de ancho */
+    }
+    .hero-text h3 {
+        font-size: 70px; /* Ajusta el tamaño de h3 en móviles */
+    }
+
+
+    .hero-image {
+        margin-top: 180px; /* Aumenta el margen en vista móvil si es necesario */
+        max-width: 100%;
+        display: block; /* Cambia a bloque para permitir el centrado */
+        margin-left: auto; /* Auto margenes para centrar horizontalmente */
+        margin-right: auto; /* Auto margenes para centrar horizontalmente */
+    }
+
+    /* Asegúrate de que la barra de búsqueda también esté centrada */
+    .search-bar {
+        margin-bottom: 15px; /* Espacio reducido entre la barra de búsqueda y otros elementos */
+    }
+
+    .search-bar input[type="text"],
+    .search-bar select {
+        font-size: 14px; /* Tamaño de fuente más pequeño para inputs y selects */
+        padding: 8px; /* Reduce el padding para hacerlos más pequeños */
+    }
+
+    .search-bar button {
+        font-size: 14px; /* Tamaño de fuente más pequeño para el botón */
+        padding: 8px; /* Reduce el padding para hacer el botón más pequeño */
+        background-color: #25ebc1; /* Asegúrate de mantener el color que desees */
+        color: #111631; /* Texto oscuro sobre el botón */
+    }
+}
+.services {
+    background-color: #101731;
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 120px; /* Ajusta este valor según el espacio deseado */
+    margin-bottom: 40px; /* Ajusta este valor según el espacio deseado */
+}
+
+.services .main-heading {
+    font-size: 15px; 
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin: 0;
+    margin-bottom: 60px;
+    background-color: #113041;
+    color: #08ffb8;
+    display: inline;
+}
+
+.services h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #e8e8e8;
+    line-height: 1.2;
+}
+
+.services p {
+    margin-top: 50px;
+    margin: 10px 50px 10px 0; /* Aumenta el margen derecho */
+    font-size: 13px; /* Tamaño de letra más pequeño */
+    color: #b9bfd6;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    letter-spacing: 2.0px; /* Espaciado entre letras para mayor separación */
+}
+
+
+.service-cards {
+    background-color: #101731;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 140px; /* Ajusta este valor según el espacio deseado */
+}
+
+.service-card {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: none; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    cursor: pointer;
+}
+.card_price-box p {
+    font-size: 32px; /* Tamaño del texto */
+    margin-bottom: 20px; /* Espacio debajo de cada párrafo */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    color: #c2c8e1; /* Color del texto */
+}
+.card_price-box h3.card_title {
+    font-size: 20px; /* Cambia el tamaño según tus necesidades */
+    margin: 0 0 10px 0; /* Espacio abajo (10px) */
+}
+
+.card_price-box p.card_price {
+    font-size: 32px; /* Cambia el tamaño del párrafo según tus necesidades */
+    margin-bottom: 20px; /* Espacio debajo de cada párrafo */
+    color: #c2c8e1; /* Opcional: puedes ajustar el color si lo deseas */
+    letter-spacing: 1.5px; /* Aumenta el espacio entre las letras */
+}
+
+.card_price-box p.card_price-description {
+    font-size: 14px; /* Cambia el tamaño del párrafo según tus necesidades */
+    margin: 0 0 5px 0; /* Espacio abajo (5px) */
+    color: #666; /* Opcional: puedes ajustar el color si lo deseas */
+    letter-spacing: 1.5px; /* Aumenta el espacio entre las letras */
+}
+.card__list li {
+    font-size: 14px; /* Cambia el tamaño según tus necesidades */
+    color: #2a2929; /* Opcional: ajusta el color si lo deseas */
+    margin-left: 10px; /* Opcional: para un pequeño espacio entre el ícono y el texto */
+}
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.servive-card_price-box h3{
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.service-card img {
+    max-width: 200px;
+    margin-bottom: 50px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #8389a3;
+    margin-bottom: 50px;
+    text-align: center; 
+    line-height: 1.8; 
+}
+
+.select-btn {
+    background-color: transparent; /* Fondo transparente */
+    color: #2cc7a3; /* Color de las letras del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.select-btn svg {
+    width: 16px; /* Ajustar el tamaño de la flecha */
+    height: 16px;
+    transition: transform 0.3s; /* Transición para la animación */
+    right: 50px;
+}
+
+.select-btn:hover svg {
+    transform: translateX(5px); /* Mover la flecha a la derecha al hacer hover */
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sombreado gris */
+    border-bottom: 3px solid #2cc7a3; /* Marco de color debajo */
+}
+/* Animación para los textos */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para las tarjetas de servicio */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Aplicar la animación al texto en la sección .services */
+.services p,
+.services h2 {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Aplicar la animación a las tarjetas de servicio */
+.service-card {
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+/* Ajustar hover para agrandar las tarjetas */
+.service-card:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .services {
+        padding: 20px; /* Ajustar padding para pantallas pequeñas */
+        margin-top: 80px; /* Reducir el margen superior en móvil */
+        margin-bottom: 20px; /* Reducir el margen inferior en móvil */
+    }
+
+    .services .main-heading {
+        font-size: 12px; /* Reducir tamaño de la fuente */
+        margin-bottom: 30px; /* Ajustar el margen inferior */
+    }
+
+    .services h2 {
+        font-size: 30px; /* Hacer el tamaño de h2 más pequeño */
+        margin-top: 20px; /* Ajustar margen superior */
+        margin-bottom: 10px; /* Ajustar margen inferior */
+    }
+
+    .services p {
+        font-size: 12px; /* Hacer el texto más pequeño */
+        margin: 0 20px; /* Ajustar márgenes para el texto */
+    }
+
+    .service-cards {
+        flex-direction: column; /* Cambiar a columna para apilar tarjetas */
+        align-items: center; /* Centrar las tarjetas */
+        gap: 20px; /* Espacio entre tarjetas */
+    }
+
+    .service-card {
+        max-width: 100%; /* Permitir que las tarjetas ocupen el 100% del ancho */
+        padding: 20px; /* Reducir el padding */
+        margin: 0; /* Sin margen en móvil */
+    }
+
+    .service-card img {
+        max-width: 150px; /* Hacer la imagen más pequeña */
+    }
+
+    .card_price-box p.card_price {
+        font-size: 24px; /* Tamaño más pequeño para el precio */
+    }
+
+    .card_price-box h3.card_title {
+        font-size: 18px; /* Hacer el título más pequeño */
+    }
+
+    .card_price-box p.card_price-description {
+        font-size: 12px; /* Hacer la descripción más pequeña */
+    }
+
+    .select-btn {
+        padding: 8px 15px; /* Ajustar el padding del botón */
+    }
+}
+
+
+/* Estilos para la sección principal */
+.continuo {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #101731;
+    color: #ffffff;
+    margin: 0;
+}
+
+.continuo .main-heading2 {
+    font-size: 15px; 
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin: 0;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    background-color: #113041;
+    color: #08ffb8;
+    display: inline;
+    
+}
+.continuo h2 {
+    margin-top: 100px;
+    font-size: 40px;
+    margin: 20px 0;
+    margin-bottom: 30px;
+}
+
+.continuo h3 {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #b9bfd6;
+}
+
+.continuo p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #40f140;
+    margin-bottom: 20px;
+}
+.icon-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #101731;
+    padding: 20px 0; 
+    margin: 100;
+    position: relative;
+}
+
+.icon-nav::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white; /* Marco blanco debajo de todos los íconos */
+}
+
+.icon-nav a {
+    text-decoration: none;
+    color: #c1c1c1;
+    font-size: 16px; /* Aumenta el tamaño del texto */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;  /* Marco blanco */
+    border-radius: 8px;  /* Bordes redondeados, si los quieres */
+    text-align: center;
+    color: #b9bfd6;
+    text-decoration: none;
+    gap: 2px; /* Ajusta el espacio entre ícono y texto */
+    padding: 30px; /* Ajusta el espacio interno */
+    background-color: #101731;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    border: none;
+}
+
+.icon-nav svg {
+    width: 50px; /* Aumenta el tamaño de los íconos SVG */
+    height: 45px;
+    margin-bottom: 5px;
+    color: #4a4e69;
+    transition: fill 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-nav a:hover {
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+
+.icon-nav a.active svg {
+    fill: #33ffc7; /* Cambia el color del ícono SVG seleccionado a verde */
+}
+
+.icon-nav a.active::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 4px;
+    background-color: #33ffc7; /* Borde verde debajo del ícono seleccionado */
+}
+
+/* JavaScript debe seguir manejando la clase 'active' al seleccionar un ícono */
+
+/* Asegúrate de agregar y quitar la clase 'active' en JavaScript cuando se selecciona un ícono */
+.pricing {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Aumento de ancho de la card */
+    transition: transform 0.3s;
+    color: black; /* Color del texto por defecto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+}
+.card-header .icon {
+    width: 40px; /* Cambia el tamaño según sea necesario */
+    height: 40px; /* Cambia el tamaño según sea necesario */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+.card-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-header h3 {
+    color: black;
+    font-size: 30px; 
+    margin: 10px 0 5px;
+    margin-bottom: 10px;
+}
+
+.card-header h2 {
+    color: black;
+    font-size: 42px; /* Aumentar el tamaño del h2 */
+    margin: 5px 0;
+    margin-bottom: 10px; 
+}
+
+.card-header p {
+    font-size: 14px;
+    color: #9293a0;
+    margin-bottom: 20px; 
+}
+
+.card-header h4 {
+    font-size: 14px;
+    color: #9293a0;
+    margin-bottom: 20px; 
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 0px solid #e4e4e4;
+    color: black; /* Color negro para el texto en los li */
+}
+
+.features .check {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+.cta-button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 40px); /* Asegura que el botón se ajuste */
+    transition: background-color 0.3s; /* Añade transición al color de fondo */
+}
+
+
+.card h3,
+.card h2,
+.card p {
+    color: inherit; /* Permite que el color del texto herede el color del padre (por defecto negro) */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.card:hover h3,
+.card:hover h2,
+.card:hover h4,
+.card:hover p {
+    color: white; /* Cambia el color de texto a blanco en hover */
+}
+
+.card ul li {
+    color: black; /* Color de texto por defecto para las listas */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.card:hover ul li {
+    color: white; /* Cambia el color del texto a blanco en hover */
+}
+
+.card-header svg {
+    width: 30px; /* Tamaño del icono */
+    height: 30px; /* Tamaño del icono */
+}
+.card:hover {
+    background-color: #316ff3; /* Cambia el fondo a azul cuando el mouse pasa sobre la tarjeta */
+    color: white; /* Cambia el color del texto a blanco cuando el mouse pasa sobre la tarjeta */
+    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta en un 5% al pasar el cursor */
+}
+.card:hover .icon {
+    fill: white; /* Cambia el color del icono al pasar el mouse */
+}
+/* Media Query para Pantallas Pequeñas */
+@media (max-width: 768px) {
+    .continuo {
+        padding: 20px; /* Ajustar padding para pantallas pequeñas */
+        margin-top: 60px; /* Reducir margen superior */
+    }
+
+    .continuo .main-heading2 {
+        font-size: 12px; /* Reducir tamaño de la fuente */
+        margin-top: 60px; /* Reducir margen superior */
+        margin-bottom: 30px; /* Reducir margen inferior */
+    }
+
+    .continuo h2 {
+        font-size: 28px; /* Hacer el tamaño de h2 más pequeño */
+        margin-top: 40px; /* Ajustar margen superior */
+        margin-bottom: 20px; /* Ajustar margen inferior */
+    }
+
+    .continuo h3 {
+        font-size: 14px; /* Hacer el tamaño de h3 más pequeño */
+    }
+
+    .continuo p {
+        font-size: 14px; /* Hacer el tamaño de los párrafos más pequeño */
+    }
+
+    .icon-nav {
+        flex-direction: column; /* Cambiar a columna para apilar íconos */
+        align-items: center; /* Centrar los íconos */
+        padding: 10px 0; /* Ajustar padding */
+        margin: 0; /* Eliminar margen en pantallas pequeñas */
+    }
+
+    .icon-nav a {
+        font-size: 14px; /* Reducir tamaño del texto de los íconos */
+        padding: 15px; /* Ajustar el padding de los íconos */
+        gap: 5px; /* Aumentar espacio entre ícono y texto */
+    }
+
+    .icon-nav svg {
+        width: 40px; /* Hacer los íconos un poco más pequeños */
+        height: 35px;
+    }
+
+    .pricing {
+        flex-direction: column; /* Cambiar a columna para apilar tarjetas */
+        align-items: center; /* Centrar las tarjetas */
+        gap: 20px; /* Espacio entre tarjetas */
+        padding: 20px; /* Ajustar padding */
+    }
+
+    .card {
+        width: 100%; /* Permitir que las tarjetas ocupen el 100% del ancho */
+        max-width: 400px; /* Limitar el ancho máximo */
+        padding: 20px; /* Ajustar padding de la tarjeta */
+    }
+
+    .card-header h2 {
+        font-size: 32px; /* Hacer el tamaño de h2 más pequeño */
+    }
+
+    .card-header h3 {
+        font-size: 24px; /* Hacer el tamaño de h3 más pequeño */
+    }
+
+    .card-header p {
+        font-size: 12px; /* Hacer el tamaño de párrafos más pequeño */
+    }
+
+    .cta-button {
+        padding: 10px; /* Ajustar padding del botón CTA */
+        font-size: 14px; /* Hacer el tamaño de fuente más pequeño */
+    }
+}
+
+.despues {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 0;
+    margin-bottom: 120px; /* Ajusta este valor según el espacio deseado */
+}
+
+/* Sección general de .despues */
+section.despues {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px; /* Reducido para evitar excesivo espaciado */
+    margin: auto;
+    background-color: white; /* Fondo blanco */
+    border-radius: 0; /* Sin bordes redondeados */
+    box-shadow: none; /* Sin sombra */
+}
+
+/* Bloques de contenido en la sección */
+.despues .content-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    gap: 150px; /* Agregado para aumentar el espacio entre el texto y las imágenes */
+    margin-bottom: 100px; /* Ajusta este valor según el espacio deseado */
+}
+
+/* Alternar la dirección de los bloques */
+.despues .content-block:nth-child(even) {
+    flex-direction: row-reverse;
+    gap: 150px; /* Asegura que el espacio también se aplique en la dirección inversa */
+}
+
+/* Contenido de texto */
+.despues .text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Sección de ilustración */
+.despues .illustration {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.despues .illustration2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* Imágenes dentro de ilustración */
+.despues .illustration2 img {
+    max-width: 120%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Imágenes dentro de ilustración */
+.despues .illustration img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Clases principales .main-surf y .main-test */
+.despues .main-surf,
+.despues .main-test {
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin: 0;
+    margin-bottom: 60px;
+    background-color: #dcf2ef; /* Fondo verde oscuro */
+    color: #00b076; /* Texto verde claro */
+    display: inline;
+}
+
+/* Títulos en .despues */
+.despues h3 {
+    font-size: 29px;
+    font-weight: bold;
+    color: black; /* Color azul */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: #1726f0; /* Celeste */
+}
+/* Párrafos en .despues */
+.despues p {
+    color: #6c757d;
+    font-size: 15px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin: 10px 0;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Títulos principales h1 en .despues */
+.despues h1 {
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin: 10px 0;
+    line-height: 2.0;
+    color: #333; /* Color oscuro */
+}
+
+/* Botón Get Started */
+.get-started {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3f4fd8; /* Azul del texto */
+    text-decoration: none;
+}
+
+.get-started:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .despues {
+        padding: 20px 0; /* Reducir padding superior e inferior */
+        margin-bottom: 60px; /* Ajustar margen inferior */
+    }
+
+    section.despues {
+        padding: 20px; /* Reducir padding para pantallas pequeñas */
+        margin: 0; /* Eliminar margen para centrar contenido */
+    }
+
+    .despues .content-block {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        gap: 20px; /* Reducir espacio entre el texto y las imágenes */
+        margin-bottom: 60px; /* Ajustar margen inferior */
+    }
+
+    .despues .content-block:nth-child(even) {
+        flex-direction: column; /* Asegurar que todos los bloques son columna */
+        gap: 20px; /* Ajustar espacio en dirección inversa */
+    }
+
+    .despues .text-content {
+        padding-right: 0; /* Eliminar padding derecho */
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+    }
+
+    .despues .illustration,
+    .despues .illustration2 {
+        justify-content: center; /* Centrar contenido en pantallas pequeñas */
+        padding: 1px; /* Agregar padding para un mejor espaciado */
+    }
+
+    /* Aumentar el tamaño de las imágenes en modo responsive */
+    .despues .illustration img,
+    .despues .illustration2 img {
+        width: 100%; /* Hacer que las imágenes ocupen el 100% del contenedor */
+        height: auto; /* Mantener la proporción de la imagen */
+        max-height: 150vh; /* Aumentar la altura máxima para ocupar más espacio */
+    }
+
+    .despues h3 {
+        font-size: 24px; /* Hacer el tamaño de h3 más pequeño */
+        margin-top: 20px; /* Ajustar margen superior */
+        margin-bottom: 15px; /* Ajustar margen inferior */
+    }
+
+    .despues p,
+    .despues h1 {
+        font-size: 14px; /* Hacer el tamaño de fuente más pequeño */
+        max-width: 100%; /* Ajustar ancho máximo para dispositivos pequeños */
+        line-height: 1.4; /* Ajustar interlineado */
+    }
+
+    .get-started {
+        font-size: 12px; /* Reducir tamaño de fuente para el botón */
+    }
+}
+
+
+section.otro {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+}
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Ocultamos los elementos antes de la animación */
+.content-block .text-content,
+.content-block .illustration,
+.content-block .illustration2 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Agregamos las clases para animar cuando se intersecten */
+.content-block.show .text-content {
+    animation: slideInFromLeft 1s ease forwards;
+}
+
+.content-block.show .illustration,
+.content-block.show .illustration2 {
+    animation: slideInFromRight 1s ease forwards;
+}
+
+.otro {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+
+.otro .main-texto {
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin: 0;
+    margin-bottom: 60px;
+    background-color: #dcf3f0;
+    color: #08b17a;
+    display: inline;
+}
+
+.otro h2 {
+    color: #000;
+    font-size: 36px;
+    margin: 0 0 20px 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.otro p {
+    color: #000;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 450px;
+    line-height: 2.0;
+    text-align: center;
+}
+
+.mapa {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mapa img {
+    width: 100%;
+    max-width: 1100px; /* Limita el tamaño máximo en pantallas grandes */
+    height: auto;
+}
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .mapa {
+        padding: 10px; /* Reducir padding para pantallas más pequeñas */
+    }
+
+    .mapa img {
+        max-width: 100%; /* Permitir que la imagen ocupe el 100% del ancho disponible */
+        max-height: 90vh; /* Aumentar la altura máxima para ocupar más espacio */
+    }
+}
+
+/* Ocultamos los elementos inicialmente */
+.final-container .content4 {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Animaciones cuando los elementos están en la vista */
+.final-container .content4.show {
+    animation: slideInFromBottom 1s ease forwards;
+}
+/* Media Queries para hacer el diseño responsive */
+.finalfondo{
+    background-color: white;
+    padding: 50px;
+}
+.final-container {
+    background-color: #232b52; /* Fondo blanco */
+    color: black;
+    border-radius: 20px;
+    padding: 80px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 50px auto; /* Centra la sección y deja un espacio hacia abajo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación */
+    position: relative;
+    justify-content: center; /* Centra horizontalmente el contenido del contenedor */
+    align-items: center; /* Centra verticalmente si es necesario */
+    text-align: center; /* Centra el texto dentro del párrafo */
+}
+
+.content4 {
+    position: relative;
+}
+
+.badge {
+    background-color: #1d3f57; /* Color del fondo de la badge */
+    color: #00ffcc; /* Color de texto similar a la imagen */
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.5; /* Aumentar el espaciado entre líneas */
+}
+
+.final-container h1 {
+    font-size: 42px; /* Ajuste del tamaño del h1 para coincidir con la imagen */
+    margin-bottom: 20px;
+    color: white;
+    line-height: 1.2; /* Mejora del espaciado */
+    text-align: center; /* Centrando el texto */
+}
+.final-container h2 {
+    font-size: 32px; /* Ajuste del tamaño del h1 para coincidir con la imagen */
+    margin-bottom: 20px;
+    color: white;
+    text-align: center; /* Centrando el texto */
+    line-height: 1.2; /* Mejora del espaciado */
+}
+.final-container p {
+    font-size: 15px; /* Ajuste del tamaño del párrafo */
+    line-height: 2.0;
+    color: #9398a5; /* Color blanco */
+    margin-bottom: 100px; /* Más espacio debajo del párrafo */
+    max-width: 420px; /* Controla el ancho para que el texto se divida en 2 líneas */
+    margin: 0 auto; /* Centra el párrafo dentro de su contenedor */
+}
+
+.final-container .cta-button2 {
+    background-color: #1bd98b;
+    color: #0d1b2a; /* Texto oscuro sobre el botón */
+    padding: 15px 30px; /* Ajuste del relleno para hacerlo más cuadrado */
+    border-radius: 10px; 
+    font-size: 15px; /* Tamaño del texto del botón */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 60px; /* Espacio adicional entre el párrafo y el botón */
+    display: inline-block;
+    text-align: center;
+}
+
+.final-container .cta-button2:hover {
+    background-color: #19c17c; /* Efecto hover más suave */
+}
+
+/* Líneas decorativas del fondo */
+.final-container::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.05); /* Líneas más suaves con el fondo blanco */
+    transform: rotate(45deg);
+}
+
+.final-container::after {
+    content: '';
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.05); /* Líneas más suaves con el fondo blanco */
+    transform: rotate(-45deg);
+}
+@media (max-width: 768px) {
+    .final-container {
+        padding: 40px; /* Reducir el padding en pantallas pequeñas */
+        margin: 30px auto; /* Reducir el margen */
+    }
+
+    .final-container h1 {
+        font-size: 32px; /* Reducir el tamaño del h1 */
+        margin-bottom: 15px; /* Ajustar el margen inferior */
+    }
+
+    .final-container h2 {
+        font-size: 24px; /* Reducir el tamaño del h2 */
+        margin-bottom: 15px; /* Ajustar el margen inferior */
+    }
+
+    .final-container p {
+        font-size: 14px; /* Reducir el tamaño del párrafo */
+        line-height: 1.5; /* Reducir el espaciado */
+        max-width: 90%; /* Permitir que el texto ocupe más ancho */
+        margin-bottom: 50px; /* Ajustar el margen inferior */
+    }
+
+    .final-container .cta-button2 {
+        padding: 10px 20px; /* Ajustar el padding del botón */
+        font-size: 14px; /* Reducir el tamaño del texto del botón */
+        margin-top: 30px; /* Ajustar el margen superior */
+    }
+
+    /* Líneas decorativas */
+    .final-container::before,
+    .final-container::after {
+        width: 200px; /* Reducir el tamaño de las líneas decorativas */
+        height: 200px;
+    }
+}
+footer {
+    background-color: #17203f;
+    padding: 40px 0;
+    color: #fff;
+    margin-top: 10px; /* Espacio hacia arriba */
+}
+
+.container3 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    width: 30%;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+.social-icons {
+    display: none; /* Ya que eliminaste los iconos, ocultamos esta sección */
+}
+
+.footer-left p {
+    line-height: 1.5;
+    margin-bottom: 80px;
+    font-size: 15px;
+}
+
+.newsletter {
+    margin-top: 40px;
+}
+
+.newsletter h3 {
+    color: #25ebc1;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.newsletter input {
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    background-color: #242c52;
+    color: #fff;
+    font-size: 12px;
+}
+
+.newsletter button {
+    padding: 15px 15px;
+    background-color: #25ebc1;
+    color: #111631;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.footer-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales para todo el contenido */
+    align-items: flex-end; /* Alinea todo el contenido a la derecha */
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.footer-right h3 {
+    font-size: 16px; /* Tamaño de letra más pequeño para h3 */
+    margin-bottom: 5px; /* Espacio inferior entre el h3 y el contenido */
+    font-weight: bold; /* Mantiene el peso del texto */
+    background: linear-gradient(90deg, #00ffab, #00cfff); /* Degradado de izquierda a derecha */
+    -webkit-background-clip: text; /* Aplica el fondo solo al texto */
+    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para que se vea el fondo */
+    text-fill-color: transparent; /* Para otros navegadores */
+}
+
+.internal-pages {
+    grid-column: span 3; /* INTERNAL PAGES ocupa las 3 columnas */
+    margin-bottom: 15px;
+    font-size: 16px; /* Tamaño más pequeño si lo necesitas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas internas */
+    gap: 20px; /* Espacio entre columnas internas */
+}
+
+.partners {
+    grid-column: span 3; /* PARTNERS ocupa las 3 columnas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas internas */
+    gap: 20px; /* Espacio entre columnas internas */
+    margin-top: 10px;
+}
+
+.columna, .columna2 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.internal-pages h3, 
+.internal-pages, .partners {
+    width: 100%;
+}
+
+.internal-pages h3 {
+    color: #25ebc1;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Nueva sección del footer */
+.footer-bottom {
+    
+    text-align: center;
+    padding: 20px 0; /* Aumenta el espacio vertical */
+    background-color: #17203f; /* Color de fondo igual al del footer */
+}
+
+.footer-line {
+    height: 2px; /* Altura de la línea */
+    background-color: #9b9fac; /* Color de la línea */
+    margin-bottom: 10px; /* Espacio entre la línea y el texto */
+}
+
+.scroll-top-btn {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #25ebc1; /* Color del icono */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    font-size: 20px; /* Tamaño del icono */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.scroll-top-btn:hover {
+    color: #fff; /* Cambia el color al pasar el mouse */
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    color: #bfc7e1;
+    margin-top: 10px;
+}
+.arrow-up {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+}
+@media (max-width: 768px) {
+    .container3 {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos */
+        padding: 0 10px; /* Reduce el padding lateral */
+    }
+
+    .footer-left {
+        width: 100%; /* Cambia a 100% en pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+
+    .footer-right {
+        grid-template-columns: repeat(2, 1fr); /* Reduce las columnas a dos en pantallas pequeñas */
+    }
+
+    .footer-right h3 {
+        font-size: 14px; /* Reducir el tamaño del texto del h3 */
+    }
+
+    .newsletter h3 {
+        font-size: 12px; /* Reducir el tamaño del texto del h3 en la newsletter */
+    }
+
+    .footer-bottom p {
+        font-size: 10px; /* Ajustar el tamaño del texto en el footer inferior */
+    }
+
+    .newsletter input,
+    .newsletter button {
+        font-size: 10px; /* Ajustar el tamaño del texto de los inputs y botones */
+    }
+}
